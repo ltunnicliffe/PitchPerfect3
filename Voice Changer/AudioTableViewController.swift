@@ -42,23 +42,29 @@ class AudioTableViewController: UITableViewController {
     
     func saveData(){
         NSUserDefaults.standardUserDefaults().setObject(previousData, forKey: "audio")
+        println("saved data again")
     }
     
-//    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-//        if editingStyle == UITableViewCellEditingStyle.Delete {
-//            let fileName = previousData[indexPath.row]
-//            let fileManager = NSFileManager.defaultManager()
-//            let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
-//            let pathArray = [dirPath, fileName]
-//            let filePath = dirPath.stringByAppendingPathComponent(fileName)
-//            var error: NSError
-//            let success:Bool = fileManager.removeItemAtPath(filePath, error: &error)
-//            if success{
-//                previousData.removeAtIndex(indexPath.row)
-//                saveData()
-//            }
-//        }
-//    }
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            println("Delete pressed")
+            let fileName = previousData[indexPath.row]
+            println("This file has been selected: \(fileName)")
+            let fileManager = NSFileManager.defaultManager()
+            let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
+            let filePath: NSString = dirPath.stringByAppendingPathComponent(fileName)
+            var error: NSError?
+            let success: Bool = fileManager.removeItemAtPath(filePath as String, error: &error)
+            println(error)
+            if success {
+                println("file manager success")
+                previousData.removeAtIndex(indexPath.row)
+                saveData()
+                loadData()
+            }
+        }
+    }
+    
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AudioCell", forIndexPath: indexPath) as! UITableViewCell
