@@ -17,7 +17,8 @@ class AudioRecorderViewController: UIViewController, AVAudioRecorderDelegate{
     @IBOutlet var resumeButton: UIButton!
     var audioRecorder: AVAudioRecorder!
     var recordedAudio: RecordedAudio!
-    
+    var previousData = [String]()
+
     @IBAction func recordButton(sender: AnyObject) {
         stopButton.hidden = false
         pauseButton.hidden = false
@@ -26,10 +27,15 @@ class AudioRecorderViewController: UIViewController, AVAudioRecorderDelegate{
         //Show directory for where recording is
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
         //Give all recordings the following name
-        let recordingName = "audiofile.wav"
+        let currentDateTime = NSDate()
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "ddMMyyyy-HHmmss"
+        let recordingName = formatter.stringFromDate(currentDateTime)+".wav"
         let pathArray = [dirPath, recordingName]
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
         println(filePath)
+        previousData.append(recordingName)
+        saveData(previousData)
         var session = AVAudioSession.sharedInstance()
         session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
         session.overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker, error: nil)
@@ -38,6 +44,25 @@ class AudioRecorderViewController: UIViewController, AVAudioRecorderDelegate{
         audioRecorder.meteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
+    }
+ 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if audioAlreadyExists() == true {
+            previousData = NSUserDefaults.standardUserDefaults().objectForKey("audio") as! [String]!
+        }
+    }
+    
+    func saveData(previousData:[String]){
+        NSUserDefaults.standardUserDefaults().setObject(previousData, forKey: "audio")
+    }
+    
+    func audioAlreadyExists() -> Bool {
+        if (NSUserDefaults.standardUserDefaults().objectForKey("audio") != nil) {
+            return true
+        }else {
+            return false
+        }
     }
 
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
@@ -50,7 +75,6 @@ class AudioRecorderViewController: UIViewController, AVAudioRecorderDelegate{
             stopButton.hidden = true
         }
     }
-    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "stopRecording") {
@@ -83,11 +107,6 @@ class AudioRecorderViewController: UIViewController, AVAudioRecorderDelegate{
         pauseButton.hidden = true
         resumeButton.hidden = true
         recordingStatus.text = "Press to record"
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 

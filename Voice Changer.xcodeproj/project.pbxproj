@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC1FE6E71B6CAD9500CB8FD7 /* AudioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FE6E61B6CAD9500CB8FD7 /* AudioTableViewController.swift */; };
 		AC2FD8BE1B24A6ED0039C9E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FD8BD1B24A6ED0039C9E5 /* AppDelegate.swift */; };
 		AC2FD8C01B24A6ED0039C9E5 /* AudioRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FD8BF1B24A6ED0039C9E5 /* AudioRecorderViewController.swift */; };
 		AC2FD8C51B24A6ED0039C9E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2FD8C41B24A6ED0039C9E5 /* Images.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC1FE6E61B6CAD9500CB8FD7 /* AudioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioTableViewController.swift; sourceTree = "<group>"; };
 		AC2FD8B81B24A6ED0039C9E5 /* Voice Changer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Voice Changer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2FD8BC1B24A6ED0039C9E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC2FD8BD1B24A6ED0039C9E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				AC2FD8BD1B24A6ED0039C9E5 /* AppDelegate.swift */,
 				AC7B150B1B2508660049E895 /* RecordedAudio.swift */,
 				AC2FD8BF1B24A6ED0039C9E5 /* AudioRecorderViewController.swift */,
+				AC1FE6E61B6CAD9500CB8FD7 /* AudioTableViewController.swift */,
 				AC7B14FE1B24AFDE0049E895 /* PlaySoundsViewController.swift */,
 				AC2FD8C41B24A6ED0039C9E5 /* Images.xcassets */,
 				AC7B15081B2502090049E895 /* Main.storyboard */,
@@ -228,6 +231,7 @@
 			files = (
 				AC2FD8C01B24A6ED0039C9E5 /* AudioRecorderViewController.swift in Sources */,
 				AC7B14FF1B24AFDE0049E895 /* PlaySoundsViewController.swift in Sources */,
+				AC1FE6E71B6CAD9500CB8FD7 /* AudioTableViewController.swift in Sources */,
 				AC7B150C1B2508660049E895 /* RecordedAudio.swift in Sources */,
 				AC2FD8BE1B24A6ED0039C9E5 /* AppDelegate.swift in Sources */,
 			);

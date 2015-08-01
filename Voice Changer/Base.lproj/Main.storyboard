@@ -14,11 +14,11 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64u-fi-FmY">
-                                <rect key="frame" x="110" y="94" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64u-fi-FmY">
+                                <rect key="frame" x="110" y="30" width="100" height="100"/>
                                 <state key="normal" image="Start recording">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -26,14 +26,14 @@
                                     <action selector="recordButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TnN-1H-eoc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Recording now" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sQ-lc-wfT">
-                                <rect key="frame" x="102" y="214" width="116" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording now" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sQ-lc-wfT">
+                                <rect key="frame" x="102" y="150" width="116" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.93189538039999997" green="0.11098300830000001" blue="0.050290935070000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fD-hM-TpB">
-                                <rect key="frame" x="135" y="298" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fD-hM-TpB">
+                                <rect key="frame" x="135" y="234" width="50" height="50"/>
                                 <state key="normal" image="Stop recording">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -41,8 +41,8 @@
                                     <action selector="stopButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DbG-GW-hGZ"/>
                                 </connections>
                             </button>
-                            <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUL-Ba-ftd">
-                                <rect key="frame" x="104" y="250" width="112" height="33"/>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUL-Ba-ftd">
+                                <rect key="frame" x="104" y="185" width="112" height="33.5"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Pause recording">
                                     <color key="titleColor" red="0.93189538039999997" green="0.11098300830000001" blue="0.050290935070000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -52,8 +52,8 @@
                                     <action selector="pauseButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1vm-Wq-fdv"/>
                                 </connections>
                             </button>
-                            <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrY-YE-Syi">
-                                <rect key="frame" x="97" y="251" width="125" height="30"/>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrY-YE-Syi">
+                                <rect key="frame" x="97" y="187" width="125" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Resume recording">
                                     <color key="titleColor" red="0.0" green="0.33895587919999998" blue="0.83855497840000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -80,6 +80,7 @@
                             <constraint firstAttribute="centerX" secondItem="zrY-YE-Syi" secondAttribute="centerX" id="zi4-pd-bH7"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" selectedImage="chipmunk@2x-iphone.png" systemItem="more" id="8ek-KZ-6ph"/>
                     <navigationItem key="navigationItem" title="Recording Studio" id="iG3-od-va2"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -92,22 +93,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1041" y="385"/>
+            <point key="canvasLocation" x="1527" y="725"/>
+        </scene>
+        <!--Audio Table View Controller-->
+        <scene sceneID="YzP-5k-d68">
+            <objects>
+                <tableViewController id="Dxx-9m-7jK" customClass="AudioTableViewController" customModule="Voice_Changer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="C7M-Gq-yIu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AudioCell" id="Jdi-so-xcW">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jdi-so-xcW" id="wGf-7D-tPw">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Dxx-9m-7jK" id="qZm-bM-Sin"/>
+                            <outlet property="delegate" destination="Dxx-9m-7jK" id="96y-Yw-yIm"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="WCL-rv-Wmm"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QID-nW-WbC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1655" y="1476"/>
         </scene>
         <!--Play Sounds View Controller-->
         <scene sceneID="Kig-1K-5gb">
             <objects>
-                <viewController id="hiI-yu-Ojw" customClass="PlaySoundsViewController" customModule="Voice_Changer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlaySoundsViewController" id="hiI-yu-Ojw" customClass="PlaySoundsViewController" customModule="Voice_Changer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eQU-BM-AtN"/>
                         <viewControllerLayoutGuide type="bottom" id="MPY-zh-vqs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IFg-5u-Que">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJf-TY-vKs">
-                                <rect key="frame" x="46" y="79" width="100" height="100"/>
+                                <rect key="frame" x="46" y="15" width="100" height="100"/>
                                 <state key="normal" image="Slow voice">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -116,7 +144,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAX-TM-1iZ">
-                                <rect key="frame" x="174" y="79" width="100" height="100"/>
+                                <rect key="frame" x="174" y="15" width="100" height="100"/>
                                 <state key="normal" image="Fast voice">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -125,7 +153,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQS-yS-32X">
-                                <rect key="frame" x="135" y="503" width="50" height="50"/>
+                                <rect key="frame" x="135" y="390" width="50" height="50"/>
                                 <state key="normal" image="Stop recording">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -134,7 +162,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtn-5L-EHL">
-                                <rect key="frame" x="46" y="428" width="100" height="100"/>
+                                <rect key="frame" x="46" y="315" width="100" height="100"/>
                                 <state key="normal" image="Low Voice">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -143,7 +171,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyY-BT-oBx">
-                                <rect key="frame" x="174" y="428" width="100" height="100"/>
+                                <rect key="frame" x="174" y="315" width="100" height="100"/>
                                 <state key="normal" image="High Voice">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -152,7 +180,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAf-xP-4WY">
-                                <rect key="frame" x="46" y="269" width="69" height="30"/>
+                                <rect key="frame" x="46" y="237" width="69" height="30"/>
                                 <state key="normal" title="Large Hall">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -161,7 +189,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jf3-LF-tK4">
-                                <rect key="frame" x="207" y="269" width="67" height="30"/>
+                                <rect key="frame" x="207" y="237" width="67" height="30"/>
                                 <state key="normal" title="Distortion">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -192,25 +220,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSy-PM-csH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1539" y="385"/>
+            <point key="canvasLocation" x="2257" y="957"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zz6-VY-zcl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cdc-Ff-eh5" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4bf-2q-qXH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="4bf-2q-qXH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="toM-fw-iwO"/>
+                        <segue destination="fS5-GK-tBX" kind="relationship" relationship="rootViewController" id="Dfd-hH-13P"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="idR-Bw-Mil" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="323" y="1009"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="BJY-fI-O4e">
+            <objects>
+                <tabBarController id="fS5-GK-tBX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="HQq-Lq-lT0"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="0C0-4E-bgV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="BmD-2T-jfW"/>
+                        <segue destination="Dxx-9m-7jK" kind="relationship" relationship="viewControllers" id="zv3-Cy-G19"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5iZ-JS-guZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950" y="1022"/>
         </scene>
     </scenes>
     <resources>
@@ -220,5 +268,6 @@
         <image name="Slow voice" width="100" height="100"/>
         <image name="Start recording" width="100" height="100"/>
         <image name="Stop recording" width="50" height="50"/>
+        <image name="chipmunk@2x-iphone.png" width="200" height="200"/>
     </resources>
 </document>
